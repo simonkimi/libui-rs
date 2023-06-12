@@ -32,7 +32,7 @@ fn main() {
     // Build libui if needed. Otherwise, assume it's in lib/
     let mut dst;
     if cfg!(feature = "build") {
-        dst = Config::new("libui").build_target("").profile("release").build();
+        dst = Config::new("libui").build_target("all").profile("release").build();
 
         let mut postfix = Path::new("build").join("out");
         if msvc {
